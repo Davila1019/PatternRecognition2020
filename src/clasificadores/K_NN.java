@@ -52,8 +52,9 @@ public class K_NN implements ClasificadorSupervisado{
     }
     
     public void clasificar(Patron patron) {
-        // la funcion sort es un metodo buebuja que ordena elementos
+        
         if(k!=0){
+         //sort funciona como algoritmo de ordenamiento burbuja
         instancias.sort((a, b) -> new Double(a.calcularDistancia(patron)).compareTo(new Double(b.calcularDistancia(patron))));
         int contador[] = new int[this.clases.size()];
         // clasificar en base al numero de vecinos
