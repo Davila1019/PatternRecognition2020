@@ -95,6 +95,7 @@ public class K_NN implements ClasificadorSupervisado{
       }else{
          System.out.println("El número k de vecinos introducido no esta definido");
          System.out.close();
+         
         }
     }
 }
