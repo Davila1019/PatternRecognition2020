@@ -6,6 +6,7 @@
 package clasificadores;
 
 import Interfaces.ClasificadorSupervisado;
+import data.MatrizConfusion;
 import data.Patron;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -19,6 +20,7 @@ import java.util.Set;
 public class K_NN implements ClasificadorSupervisado{
     private ArrayList<String> clases, aux;
     private ArrayList<Patron> instancias;
+    private MatrizConfusion mc;
     private int k, max;
     private int mayor[];
     public K_NN(int k) {
@@ -32,7 +34,7 @@ public class K_NN implements ClasificadorSupervisado{
         for(int x=0; x<instancias.size(); x++){
                 aux.add(instancias.get(x).getClase());
         }
-        
+       
        Set<String> hs = new HashSet<String>(aux);
        aux.clear();
        aux.addAll(hs);
@@ -71,6 +73,7 @@ public class K_NN implements ClasificadorSupervisado{
          if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
              cont++;
          }
+        this.mc = new MatrizConfusion(instancias); 
      }
      eficacia=(cont*100)/instancias.size();
      System.out.println("Eficacia de un "+eficacia+"%");
@@ -92,10 +95,16 @@ public class K_NN implements ClasificadorSupervisado{
                 break;
             }
         }
+        
       }else{
          System.out.println("El número k de vecinos introducido no esta definido");
          System.out.close();
          
         }
+       
     }
+    public MatrizConfusion obtenerMatriz() {
+        return mc;
+    }
+    
 }

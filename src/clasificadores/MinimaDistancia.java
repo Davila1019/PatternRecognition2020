@@ -7,6 +7,7 @@ package clasificadores;
 
 import data.Patron;
 import Interfaces.ClasificadorSupervisado;
+import data.MatrizConfusion;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -19,6 +20,7 @@ public class MinimaDistancia implements ClasificadorSupervisado{
 
     ArrayList<Patron> representativos;
     ArrayList<String> aux;
+    MatrizConfusion mc;
     Patron m;
     double[] sumatoria;
     public MinimaDistancia() {
@@ -81,14 +83,20 @@ public class MinimaDistancia implements ClasificadorSupervisado{
 		}
           instancias.get(x).setClaseResultante(representativos.get(menor).getClase());
       }
-     for(int x=0; x<instancias.size();x++){
-         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
-         if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
-             cont++;
-         }
-     }
-     eficacia=(cont*100)/instancias.size();
-     System.out.println("Eficacia de un "+eficacia+"%");
+     this.mc = new MatrizConfusion(instancias);
+//     for(int x=0; x<instancias.size();x++){
+//         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
+//         if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
+//             cont++;
+//         }
+//     }
+//     eficacia=(cont*100)/instancias.size();
+//     System.out.println("Eficacia de un "+eficacia+"%");
+    }
+    
+     public MatrizConfusion obtenerMatriz() {
+        return mc;
     }
 }
+
     
