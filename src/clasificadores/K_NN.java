@@ -76,7 +76,7 @@ public class K_NN implements ClasificadorSupervisado{
         this.mc = new MatrizConfusion(instancias); 
      }
      eficacia=(cont*100)/instancias.size();
-     System.out.println("Eficacia de un "+eficacia+"%");
+     System.out.println("Eficacia de Knn= "+eficacia+"%");
     }
     
     public void clasificar(Patron patron) {

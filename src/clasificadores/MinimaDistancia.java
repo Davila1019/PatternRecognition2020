@@ -84,14 +84,14 @@ public class MinimaDistancia implements ClasificadorSupervisado{
           instancias.get(x).setClaseResultante(representativos.get(menor).getClase());
       }
      this.mc = new MatrizConfusion(instancias);
-//     for(int x=0; x<instancias.size();x++){
-//         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
-//         if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
-//             cont++;
-//         }
-//     }
-//     eficacia=(cont*100)/instancias.size();
-//     System.out.println("Eficacia de un "+eficacia+"%");
+     for(int x=0; x<instancias.size();x++){
+         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
+         if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
+             cont++;
+         }
+     }
+     eficacia=(cont*100)/instancias.size();
+     System.out.println("Eficacia de Minima Distancia= "+eficacia+"%");
     }
     
      public MatrizConfusion obtenerMatriz() {
