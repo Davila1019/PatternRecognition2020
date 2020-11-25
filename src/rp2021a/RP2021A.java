@@ -5,6 +5,7 @@
  */
 package rp2021a;
 
+import clasificadores.Bayes;
 import clasificadores.K_NN;
 import data.LeerDatos;
 import data.Patron;
@@ -22,7 +23,8 @@ public class RP2021A {
     public static void main(String[] args) {
         
         ArrayList<Patron> instancias = LeerDatos.tokenizarDataSet();
-        K_NN m = new K_NN(3);
+        //K_NN m = new K_NN(3);
+        Bayes m = new Bayes();
         MinimaDistancia n = new MinimaDistancia();
         double[] distancias = new double[instancias.size()];
         
@@ -36,11 +38,7 @@ public class RP2021A {
 //           System.out.println(x+"= "+distancias[x]);
 //        }
         m.entrenar(instancias);
-        m.clasificar(instancias);
-        System.out.println(m.obtenerMatriz().toString());
-        n.entrenar(instancias);
-        n.clasificar(instancias);
-        System.out.println(n.obtenerMatriz().toString());
+      
         // TODO: TOKENIZADOR PARA PODER SEPARAR POR COMAS Y GENERAR UN COLECCION DE PATRONES
         
     }
