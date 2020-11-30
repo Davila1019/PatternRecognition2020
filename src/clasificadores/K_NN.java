@@ -69,7 +69,7 @@ public class K_NN implements ClasificadorSupervisado{
            clasificar(p);
        }
         for(int x=0; x<instancias.size();x++){
-         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
+//         System.out.println("Clase "+x+" = "+instancias.get(x).getClase()+" -> Clase Resultante = "+instancias.get(x).getClaseResultante());
          if(instancias.get(x).getClase().equals(instancias.get(x).getClaseResultante())){
              cont++;
          }
@@ -77,6 +77,7 @@ public class K_NN implements ClasificadorSupervisado{
      }
      eficacia=(cont*100)/instancias.size();
      System.out.println("Eficacia de Knn= "+eficacia+"%");
+     System.out.println(cont+" de "+instancias.size());
     }
     
     public void clasificar(Patron patron) {
