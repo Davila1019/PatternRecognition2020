@@ -38,12 +38,16 @@ public class RP2021A {
         //Patron j = new Patron("","", new double[]{1.52101,13.64,4.49,1.1,71.78,0.06,8.75,0}); //glass.txt
         //Patron j = new Patron("","", new double[]{0,0,0,0,0,0,1,-1,0,0,-1,-1,0,0,0,0,1,1,-1,-1,0,0,0,0,1,1,1,1,0,0,1,1,0,0}); // inosfere.txt
 
-        m.entrenar(instancias);
+        //Clasificador Bayes
+        /*m.entrenar(instancias);
         m.clasificar(instancias);
+        //Clasificador Knn
         o.entrenar(instancias2);
         o.clasificar(instancias2);
+        //Clasificador Minima Distancia
         n.entrenar(instancias3);
-        n.clasificar(instancias3);
+        n.clasificar(instancias3);*/
+        //Clusterizador C Means
         c.imprimir();
         
         
