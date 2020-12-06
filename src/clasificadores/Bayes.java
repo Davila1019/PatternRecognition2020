@@ -20,11 +20,15 @@ import javafx.util.Pair;
 public class Bayes implements ClasificadorSupervisado {
 
    
-    ArrayList<Patron> promedio,varianza,desviacion;
+    ArrayList<Patron> promedio;
+    ArrayList<Patron> varianza;
+    ArrayList<Patron> desviacion;
     ArrayList<String> nombre;
     ArrayList<Pair<String,Double>>  numPatronClase = new ArrayList<>();
     
-    Patron promedios, varianzas, desviaciones;
+    Patron promedios; 
+    Patron varianzas;
+    Patron desviaciones;
     double[] auxiliar,var, des,porcentaje;
     public Bayes() {
         this.promedio = new ArrayList<>();

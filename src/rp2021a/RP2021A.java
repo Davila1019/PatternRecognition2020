@@ -46,7 +46,7 @@ public class RP2021A {
         n.entrenar(instancias3);
         n.clasificar(instancias3);
         
-        // TODO: TOKENIZADOR PARA PODER SEPARAR POR COMAS Y GENERAR UN COLECCION DE PATRONES
+        
         
     }
     
