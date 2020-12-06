@@ -28,7 +28,10 @@ public class Bayes implements ClasificadorSupervisado {
     Patron promedios; 
     Patron varianzas;
     Patron desviaciones;
-    double[] auxiliar,var, des,porcentaje;
+    double[] auxiliar;
+    double[] var;
+    double[] des;
+    double[] porcentaje;
     public Bayes() {
         this.promedio = new ArrayList<>();
         this.varianza = new ArrayList<>();

@@ -7,6 +7,7 @@ package rp2021a;
 
 import clasificadores.Bayes;
 import clasificadores.K_NN;
+import clasificadores.CMeans;
 import data.LeerDatos;
 import data.Patron;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class RP2021A {
         ArrayList<Patron> instancias3= instancias;
         K_NN o = new K_NN(1);
         Bayes m = new Bayes();
+        CMeans c = new CMeans(instancias,4);
         MinimaDistancia n = new MinimaDistancia();
         double[] distancias = new double[instancias.size()];
         
@@ -42,7 +44,7 @@ public class RP2021A {
         o.clasificar(instancias2);
         n.entrenar(instancias3);
         n.clasificar(instancias3);
-        
+        c.imprimir();
         
         
     }
