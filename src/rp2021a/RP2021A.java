@@ -30,7 +30,7 @@ public class RP2021A {
         MinimaDistancia n = new MinimaDistancia();
         double[] distancias = new double[instancias.size()];
         
-        Patron j = new Patron("","", new double[]{2.4,3.3,5.6,7.8}); // Iris.txt
+        // Patron j = new Patron("","", new double[]{2.4,3.3,5.6,7.8});  Iris.txt
         //Patron j = new Patron("","", new double[]{13.2,1.78,2.14,11.2,100,2.65,2.76,.26,1.28,4.38,1.05}); //Wine.txt
         //Patron j = new Patron("","", new double[]{0.455,0.365,0.095,0.514,0.2245,0.101,0.15,15}); //abalone.txt
         //Patron j = new Patron("","", new double[]{1.52101,13.64,4.49,1.1,71.78,0.06,8.75,0}); //glass.txt
