@@ -6,7 +6,6 @@
 package clasificadores;
 
 import Interfaces.ClasificadorSupervisado;
-import data.MatrizConfusion;
 import data.Patron;
 import java.util.ArrayList;
 import java.util.HashSet;
