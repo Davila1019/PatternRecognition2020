@@ -35,10 +35,7 @@ public class RP2021A {
         //Patron j = new Patron("","", new double[]{0.455,0.365,0.095,0.514,0.2245,0.101,0.15,15}); //abalone.txt
         //Patron j = new Patron("","", new double[]{1.52101,13.64,4.49,1.1,71.78,0.06,8.75,0}); //glass.txt
         //Patron j = new Patron("","", new double[]{0,0,0,0,0,0,1,-1,0,0,-1,-1,0,0,0,0,1,1,-1,-1,0,0,0,0,1,1,1,1,0,0,1,1,0,0}); // inosfere.txt
-//        for(int x = 0 ; x<  instancias.size();x++){
-//            distancias[x] =    instancias.get(x).calcularDistancia(j);
-//           System.out.println(x+"= "+distancias[x]);
-//        }
+
         m.entrenar(instancias);
         m.clasificar(instancias);
         o.entrenar(instancias2);
