@@ -48,7 +48,8 @@ public class RP2021A {
         n.entrenar(instancias3);
         n.clasificar(instancias3);*/
         //Clusterizador C Means
-        c.imprimir();
+        c.clusterizar(instancias);
+        
         
         
     }

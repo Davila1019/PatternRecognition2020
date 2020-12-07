@@ -28,7 +28,7 @@ public class CMeans implements Clusterizacion{
             Patron[] centroidesIniciales = new Patron[c];
             for (int x=0; x < this.c;x++){
                 int pos = ran.nextInt(this.instancias.size());
-                centroidesIniciales[x] = new Patron("Centroide"+x,"",this.instancias.get(pos).getVectorC().clone());
+                centroidesIniciales[x] = new Patron("Centroide "+x,"",this.instancias.get(pos).getVectorC().clone());
             }
             // agregamos a la coleccion de centroidesIniciales los centroidesIniciales iniciales
             this.getCentroides().add(centroidesIniciales);
@@ -132,7 +132,7 @@ public class CMeans implements Clusterizacion{
                        
                // re etiquetar 
               etiquetar(this.getCentroides().get(this.getCentroides().size()-1));
-              System.out.println(contador++);
+              //System.out.println(contador++);
              
             }while (!verificaCentroides()&&contador<500);
                
