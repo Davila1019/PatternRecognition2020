@@ -5,8 +5,12 @@
         <group>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clasificadores/K_NN.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clasificadores/Bayes.java</file>
+            <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clusterimagenes/AbrirImagen.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clasificadores/CMeans.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/Interfaces/Clusterizacion.java</file>
+            <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clusterimagenes/ClusterImagenesMain.java</file>
+            <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clusterimagenes/ClusterizacionImagenes.java</file>
+            <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clusterimagenes/CMeansImagen.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/rp2021a/RP2021A.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/Interfaces/ClasificadorSupervisado.java</file>
             <file>file:/C:/Users/jesua/Documents/IPN/Semestre%207/Reconocimiento%20de%20Patrones/PatternRecognition/src/clasificadores/MinimaDistancia.java</file>

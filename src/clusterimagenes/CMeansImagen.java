@@ -1,23 +1,20 @@
-package clasificadores;
-
+package clusterimagenes;
 import java.util.ArrayList;
-
-import Interfaces.Clusterizacion;
-import data.Patron;
 import java.util.Random;
 
-import clusterimagenes.AbrirImagen;
-import clusterimagenes.PatronImagen;
-public class CMeans {
-        // conjunto de instancias
-    // conjunto de instancias
+/**
+ *
+ * @author working
+ */
+public class CMeansImagen {
+     // conjunto de instancias
     private ArrayList<PatronImagen> instancias;
     // numero de clusters
     private int c;
     // centroidesIniciales 
     private ArrayList<PatronImagen[]> centroides;
     int[] contadores;  
-    public CMeans(ArrayList<PatronImagen> instancias, int c) {
+    public CMeansImagen(ArrayList<PatronImagen> instancias, int c) {
         this.instancias = instancias;
         this.centroides = new ArrayList<>();
         this.c = c;
@@ -75,24 +72,7 @@ public class CMeans {
      }while (!verificaCentroides()&&contador<500);
      System.out.println();
     
-    }
     
-    private void etiquetar (PatronImagen[] centroides){
-    // recorrer las instancias y etiquetar 
-    // cada una de ellas en base a distancias
-    for (PatronImagen patron: this.getInstancias()){
-       double menor = AbrirImagen.calcularDistEucli(patron,centroides[0]);
-       patron.setClase(centroides[0].getClase());
-       for (int x=1; x < this.c; x++){
-       // calculamos distancias
-       double dist = AbrirImagen.calcularDistEucli(patron,centroides[x]);
-       if (dist< menor){
-       menor = dist;
-       patron.setClase(centroides[x].getClase());
-       }
-       }
-      
-    }
   
     }
 
@@ -153,6 +133,25 @@ public class CMeans {
      */
     public ArrayList<PatronImagen> getInstancias() {
         return instancias;
+    }   
+    
+    private void etiquetar (PatronImagen[] centroides){
+    // recorrer las instancias y etiquetar 
+    // cada una de ellas en base a distancias
+    for (PatronImagen patron: this.getInstancias()){
+       double menor = AbrirImagen.calcularDistEucli(patron,centroides[0]);
+       patron.setClase(centroides[0].getClase());
+       for (int x=1; x < this.c; x++){
+       // calculamos distancias
+       double dist = AbrirImagen.calcularDistEucli(patron,centroides[x]);
+       if (dist< menor){
+       menor = dist;
+       patron.setClase(centroides[x].getClase());
+       }
+       }
+      
     }
-        
+  
+    }
+    
 }

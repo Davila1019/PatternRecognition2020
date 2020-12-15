@@ -28,7 +28,6 @@ public class RP2021A {
         ArrayList<Patron> instancias3= instancias;
         K_NN o = new K_NN(1);
         Bayes m = new Bayes();
-        CMeans c = new CMeans(instancias,4);
         MinimaDistancia n = new MinimaDistancia();
         double[] distancias = new double[instancias.size()];
         
@@ -48,7 +47,7 @@ public class RP2021A {
         n.entrenar(instancias3);
         n.clasificar(instancias3);*/
         //Clusterizador C Means
-        c.clusterizar(instancias);
+      
         
         
         
