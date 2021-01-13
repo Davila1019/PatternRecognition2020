@@ -17,6 +17,6 @@ public class ClusterImagenesMain {
     public static void main(String[] args) {
         ClusterizacionImagenes aux = new ClusterizacionImagenes();
         aux.abrir();
-        aux.clusterizar(180);
+        aux.clusterizar(300);
     }
 }

@@ -12,6 +12,7 @@ import data.LeerDatos;
 import data.Patron;
 import java.util.ArrayList;
 import clasificadores.MinimaDistancia;
+import clasificadores.Min_Max;
 /**
  *
  * @author jesua
@@ -29,6 +30,7 @@ public class RP2021A {
         K_NN o = new K_NN(1);
         Bayes m = new Bayes();
         MinimaDistancia n = new MinimaDistancia();
+        Min_Max e = new Min_Max(instancias2,3);
         double[] distancias = new double[instancias.size()];
         
         // Patron j = new Patron("","", new double[]{2.4,3.3,5.6,7.8});  Iris.txt
@@ -47,7 +49,8 @@ public class RP2021A {
         n.entrenar(instancias3);
         n.clasificar(instancias3);*/
         //Clusterizador C Means
-      
+       e.clasifica();
+       
         
         
         

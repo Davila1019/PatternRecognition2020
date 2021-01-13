@@ -2,10 +2,6 @@ package clusterimagenes;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- *
- * @author working
- */
 public class CMeansImagen {
      // conjunto de instancias
     private ArrayList<PatronImagen> instancias;
