@@ -205,6 +205,11 @@ public class Bayes implements ClasificadorSupervisado {
             System.out.print(" -> "+instancias.get(x).getClase()+"\n");
         }
     }
+
+    @Override
+    public void clasificar(Patron patron) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
     
     

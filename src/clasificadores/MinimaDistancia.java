@@ -98,6 +98,11 @@ public class MinimaDistancia implements ClasificadorSupervisado{
      public MatrizConfusion obtenerMatriz() {
         return mc;
     }
+
+    @Override
+    public void clasificar(Patron patron) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
     

@@ -80,6 +80,14 @@ public class Patron {
         this.vectorC = vectorC;
     }
     
+    public void trasladar(Patron aux){
+    // recorrer el numero de caracteristicas 
+    for (int x=0; x < this.vectorC.length;x++){
+      this.vectorC[x]-=aux.getVectorC()[x];
+    }
+    
+    }
+    
     
     
     
