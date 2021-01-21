@@ -70,7 +70,6 @@ public class RP2021A {
        //LernMatrix
        lm.aprendizaje(entrenamiento);
        ArrayList<PatronBinario> datos = new ArrayList<>();
-       
        datos.add(new PatronBinario(new int[]{1,0,1,0,1},new int[]{1,0,0},new int[]{0,0,0}));
        datos.add(new PatronBinario(new int[]{1,1,0,0,1},new int[]{0,1,0},new int[]{0,0,0}));
        datos.add(new PatronBinario(new int[]{1,0,1,1,0},new int[]{0,0,1},new int[]{0,0,0}));
