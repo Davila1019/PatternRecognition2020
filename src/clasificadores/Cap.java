@@ -8,14 +8,14 @@ package clasificadores;
 
 import data.MatrizConfusion;
 import java.util.ArrayList;
-import Interfaces.ClasificadorSupervisado;
+import Interfaces.Asociativa;
 import data.Patron;
 
 /**
  *
  * @author GitHub
  */
-public class Cap implements ClasificadorSupervisado{
+public class Cap implements Asociativa{
     
     private double rendimiento;
     private MatrizConfusion matriz;
@@ -29,7 +29,7 @@ public class Cap implements ClasificadorSupervisado{
 
     
     @Override
-    public void entrenar(ArrayList<Patron> instancias) {
+    public void aprendizaje(ArrayList<Patron> instancias) {
        // determinar las clases participantes
        this.instancias=instancias;
        determinarClasesInvolucradas(instancias);
@@ -52,8 +52,7 @@ public class Cap implements ClasificadorSupervisado{
        
     }
 
-    @Override
-    public void clasificar(Patron patron) {
+    public void asociarConjunto(Patron patron) {
        // trasladar el patron 
        // patron.trasladar(this.patronMedio);
        // ejecutamos la clasificación 
@@ -78,9 +77,6 @@ public class Cap implements ClasificadorSupervisado{
     }
 
     
-    public void clasificaConjunto(ArrayList<Patron> conjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     
     public double getRendimiento() {
@@ -128,10 +124,10 @@ public class Cap implements ClasificadorSupervisado{
            }  
     }
     @Override
-    public void clasificar(ArrayList<Patron> instancias) {
+    public void recuperacion(ArrayList<Patron> instancias) {
        for(int x=0; x<instancias.size() ;x++)
        {
-          clasificar(instancias.get(x)); 
+          asociarConjunto(instancias.get(x)); 
        }
     }
     

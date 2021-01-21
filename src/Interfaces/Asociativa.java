@@ -5,14 +5,14 @@
  */
 package Interfaces;
 
-import data.PatronBinario;
+import data.Patron;
 import java.util.ArrayList;
 
 /**
  *
  * @author jesua
  */
-public interface AsosiativaBinaria {
-    public abstract void aprendizaje(ArrayList<PatronBinario> instancias);
-    public abstract void recuperacion(ArrayList<PatronBinario> instancias);
+public interface Asociativa {
+    public abstract void aprendizaje(ArrayList<Patron> instancias);
+    public abstract void recuperacion(ArrayList<Patron> instancias);
 }

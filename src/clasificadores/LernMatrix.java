@@ -45,7 +45,7 @@ public class LernMatrix implements AsosiativaBinaria {
     }
 
     @Override
-    public void clasificacion(ArrayList<PatronBinario> instancias) {
+    public void recuperacion(ArrayList<PatronBinario> instancias) {
         for(int x=0;x<instancias.size();x++){
             clasificar(instancias.get(x));
         }

@@ -39,6 +39,8 @@ public class RP2021A {
         
         double[] distancias = new double[instancias.size()];
         ArrayList<PatronBinario> entrenamiento = new ArrayList<>();
+        
+        
         entrenamiento.add(new PatronBinario(new int[]{1,0,1,0,1},new int[]{1,0,0},new int[]{0,0,0}));
         entrenamiento.add(new PatronBinario(new int[]{1,1,0,0,1},new int[]{0,1,0},new int[]{0,0,0}));
         entrenamiento.add(new PatronBinario(new int[]{1,0,1,1,0},new int[]{0,0,1},new int[]{0,0,0}));
@@ -62,9 +64,9 @@ public class RP2021A {
         //Clusterizador C Means
        //e.clasifica();
        //Cap
-//       r.entrenar(instancias);
-//       r.clasificar(instancias2);
-//       System.out.println(r.getRendimiento());
+//       r.aprendizaje(instancias);
+//       r.recuperacion(instancias2);
+//       System.out.println(r.getRendimiento()+"% de eficacia");
        //LernMatrix
        lm.aprendizaje(entrenamiento);
        ArrayList<PatronBinario> datos = new ArrayList<>();
@@ -74,7 +76,7 @@ public class RP2021A {
        datos.add(new PatronBinario(new int[]{1,0,1,1,0},new int[]{0,0,1},new int[]{0,0,0}));
        
        
-       lm.clasificacion(datos);
+       lm.recuperacion(datos);
       
     }
     
